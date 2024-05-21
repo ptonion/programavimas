@@ -1,0 +1,151 @@
+
+
+*{
+    text-decoration: none;
+}
+
+
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+    text-align: center;
+}
+
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+  
+.topnav a.active {
+    background-color: #04AA6D;
+    color: white;
+}
+
+h1 {
+    color: white;
+    background-color: black;
+    padding: 20px;
+}
+
+h3 {
+    color: red;
+    border: 5px dashed green;
+}
+
+ol li {
+    color: blue;
+}
+
+.box {
+    width: 50px;
+    border: 5px solid rgb(17, 30, 65);
+    padding: 5px;
+    margin: 10px;
+    color: black;}
+
+
+.footer{
+    width: 100vw;
+    display: block;
+    overflow: hidden;
+    padding: 70px 0;
+    box-sizing: border-box;
+    background-color: #18181a;
+    color: white;
+}
+.inner_footer{
+    display: block;
+    margin: 0 auto;
+    width: 1100px;
+    height: 100%;
+}
+
+.inner_footer .logo_container{
+    width: 35%;
+    float: left;
+    height: 100%;
+    display: block;
+}
+
+.inner_footer .logo_container img{
+    width: 80px;
+    height: auto;
+}
+.headerLog img{
+    width: 80px;
+    height: auto;
+}
+.inner_footer .footer_third{
+    width: calc(21.6666666667% - 20px);
+    margin-right:  10px;
+    float: left;
+    height: 100%;
+}
+
+.inner_footer .footer_third:last-child{
+    margin-right: 0;
+}
+
+.inner_footer .footer_third h1{
+    font-family: 'arial';
+    font-size: 22px;
+    color: white;
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.inner_footer .footer_third a{
+    font-family: 'arial';
+    font-size: 18px;
+    color: white;
+    display: block;
+    font-weight: 200;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.inner_footer .footer_third li{
+    display: inline-block;
+    padding:  0 5px;
+    font-size: 20px;
+}
+
+.inner_footer .footer_third span{
+    color: white;
+    font-family: 'arial';
+    font-size: 16px;
+    font-weight: 200;
+    display: block;
+    width: 100%;
+    padding-top: 20px;
+
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.fa-google {
+    background: #dd4b39;
+    color: white;
+}
+
+.fa-instagram {
+    background: #125688;
+    color: white;
+}
+
+/* .action {
+    
+} */

@@ -1,0 +1,21 @@
+praleidau 6 nes sugebejau istrint
+
+
+
+
+
+
+7. Sukurti footer elementą, kuris atvaizduojamas visuose puslapiuose. Jame turi būti:
+7.1. Logotipas.
+7.2. Navigacija į kitus vidinius puslapius.
+7.3. Sąrašas, kuriame yra nuorodos į socialinius tinklus. Kiekviena nuoroda turi būti atvaizduojama kaip to socialinio puslapio ikonėlė.
+7.4. Forma, kurioje turi būti:
+7.4.1. Vardui įrašyti skirtas laukelis.
+7.4.2. El. paštui skirtas įrašyti laukelis.
+7.4.3. Tel. numeriui skirtas įrašyti laukelis.
+7.4.4. Laukelis skirtas žinutei įrašyti.
+7.4.5. Checkbox tipo laukelis „Sutinku su privatumo taisyklėmis"
+7.4.6. Mygtukas skirtas formai išsiųsti.
+
+
+https://flexboxfroggy.com/

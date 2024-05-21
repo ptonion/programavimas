@@ -1,0 +1,46 @@
+h1 {
+    color: gold !important;
+}
+
+
+
+#heading-id {
+    color: darkgoldenrod;
+}
+
+.heading.heading {
+    color: coral;
+}
+
+body h1.heading {
+    color: greenyellow;
+}
+
+h1.heading {
+    color: rgb(155, 110, 129);
+}
+
+.heading {
+    color: rgb(204, 47, 113);
+}
+
+html head + body h1 {
+    color: orange;
+}
+
+html body h1 {
+    color: yellow;
+}
+
+body h1 {
+    color: yellowgreen;
+}
+
+h1 {
+    color: red;
+    color: blue;
+}
+
+h1 {
+    color: brown;
+}
