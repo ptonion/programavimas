@@ -2,7 +2,7 @@
     height: 600px;
     width: 600px;
     background-color: rgb(209, 206, 206);
-    padding: 15px;
+    margin-bottom: 15px;
 }
 
 .green {
@@ -23,6 +23,79 @@
 .orange {
     background-color: orange;
 }
+
+.container8-named {
+    display: grid;
+    grid-template-columns: [col-1 first-start] 1fr [col-2 purple-column-start] 1fr [col-3] 1fr [col-4 first-end];
+    grid-template-rows: [green-row-start]1fr 1fr [red-row-start green-row-end purple-row-start] 1fr 1fr [purple-row-end];
+}
+.container8-named .child:nth-child(1) {
+    grid-column: first-start / first-end;
+    grid-row: green-row-start / green-row-end;
+}
+.container8-named .child:nth-child(2) {
+    grid-column: first-start;
+    grid-row: red-row-start;
+}
+.container8-named .child:nth-child(3) {
+    grid-column: purple-column-start;
+    grid-row: purple-row-start / purple-row-end;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.container8-areas {
+    display: grid;
+    background-color: gray;
+    width: 600px;
+    height: 600px;
+    grid-template-columns:  1fr  50px  1fr 1fr ;
+    grid-template-rows: 1fr 1fr  1fr 1fr ;
+    grid-template-areas: 
+        "blue  . green  green"
+        "blue  . green  green"
+        "blue  yellow yellow yellow"
+        "orange. purple red";
+}
+
+
+.container8-areas .green {
+    grid-area: green;
+}
+.container8-areas .red {
+    grid-area: red;
+}
+.container8-areas .yellow {
+    grid-area: yellow;
+}
+.container8-areas .blue {
+    grid-area: blue;
+}
+.container8-areas .orange {
+    grid-area: orange;
+}
+.container8-areas .purple {
+    grid-area: purple;
+}
+
+
+
+
+
+
+
+
+
 
 .container1 {
     display: grid;
@@ -149,7 +222,7 @@
 
 .container4 {
     display: grid;
-    grid-template-columns: 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5%  ;
+    grid-template-columns: repeat(20, 1fr)  ;
     grid-template-rows: 150px 150px 150px 150px;
 }
 
@@ -247,7 +320,7 @@
     grid-template-rows: 50% 50% ;
 }
 
-.container6 .child:nth-child(1) {
+.container6 > .child:nth-child(1) {
     grid-column: 1 / 4;
 
     grid-row: 1;
