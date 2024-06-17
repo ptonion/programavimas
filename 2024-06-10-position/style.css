@@ -1,0 +1,21 @@
+body {
+    margin-bottom: 1500px;
+}
+
+
+.container {
+    background-color: antiquewhite;
+    width: 600px;
+    height: 600px;
+    position: relative;
+}
+.child {
+    background-color: rgb(86, 231, 134);
+    width: 100px;
+    height: 200px;
+    position: sticky;
+    /* transform: translate(-50%, -50%); */
+    top: 0%; 
+    left: 50%;
+
+}
