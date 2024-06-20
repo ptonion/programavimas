@@ -1,0 +1,86 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.container1 {
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+
+}
+
+header {
+    background-image: url("bg-header-desktop.png") ;
+    /* cia reiktu oppacity uzdeti */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgb(255, 255, 255);
+    
+}
+
+.upperText {
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* align-items: center; */
+    width: 38%;
+}
+
+.upperText h1{
+    margin: 0;
+    text-align: center;
+}
+    p{
+    text-align: center;
+    color: grey;
+    opacity: 0.5;
+}
+
+
+.logo {
+    width: 120px;
+    margin-top: 80px;
+}
+
+.buttonsBox{
+    display: flex;
+    gap: 15px;
+}
+.buttonsBox :nth-child(1){
+    background-color: rgb(70, 209, 112);
+    color: white;
+    border-style: none;
+    padding: 15px 25px;
+}
+.buttonsBox :nth-child(2){
+    background-color: rgb(86, 95, 221);
+    color: white;
+    border-style: none;
+    padding: 15px 25px;
+}
+
+button {
+    border-radius: 50px;
+}
+
+.container2 {
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 70px;
+    width: 40%;
+}

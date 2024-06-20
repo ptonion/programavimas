@@ -170,17 +170,25 @@ footer {
 
 .footerBottom {
     display: flex;
-    /* flex-direction: column; */
-    gap: 50px;
+    gap: 30px;
+    justify-content: space-between;
 }
 
 .line {
     display: flex;
     gap: 30px;
+    align-items: flex-start;
+}
+
+.line p {
+    margin: 0;
 }
 
 .first {
     width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .second {
@@ -201,7 +209,10 @@ footer {
 .third a {
     color: white;
 }
+.fourth {
+    width: 25%;
+}
 
-footer {
-    padding-left: 50px;
+.copyrights {
+    text-align: end;
 }

@@ -6,3 +6,6 @@ https://cssgradient.io/
 
 
 https://github.com/frontendmentorio/huddle-landing-page-with-alternating-feature-blocks
+
+
+https://github.com/frontendmentorio/clipboard-landing-page/blob/master/design/desktop-design.jpg
