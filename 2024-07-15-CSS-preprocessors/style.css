@@ -1,0 +1,45 @@
+body {
+  background-color: green;
+}
+
+header {
+  background-color: blue;
+  padding: 30px;
+}
+header nav {
+  background-color: yellow;
+  width: 50%;
+  padding: 15px;
+}
+header nav ul {
+  padding-left: 0;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+header nav ul li {
+  border: 1px solid black;
+}
+header nav ul li:last-child {
+  border-radius: 15px;
+}
+header nav ul li a {
+  color: rgb(255, 0, 0);
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px;
+  display: inline-block;
+}
+header nav ul li a:hover {
+  text-decoration: line-through;
+  color: rgb(0, 58, 8);
+}
+header nav ul li a.active {
+  text-decoration: underline;
+  color: rgb(102, 0, 192);
+}
+header nav ul li a.active:hover {
+  color: pink;
+  background-color: brown;
+}/*# sourceMappingURL=style.css.map */

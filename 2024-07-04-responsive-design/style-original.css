@@ -1,4 +1,4 @@
-w* {
+* {
     box-sizing: border-box;
 }
 
@@ -87,6 +87,30 @@ body {
     margin-bottom: 0;
 }
 
+
+@media (max-width: 800px) {
+    .main-testimonials .card:nth-of-type(1n + 1) {
+        width: 100%;
+    }
+    .main-testimonials {
+        width: 60%;
+    }
+    .side-testimonials {
+        width: 40%;
+    }
+}
+@media (max-width: 500px) {
+    .main-testimonials {
+        width: 100%;
+    }
+    .side-testimonials {
+        width: 100%;
+    }
+    .cont {
+        flex-wrap: wrap;
+    } 
+    
+}
 
 /* .main-testimonials .card {
     height: 50%;
