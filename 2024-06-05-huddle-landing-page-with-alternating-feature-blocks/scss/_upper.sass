@@ -1,0 +1,43 @@
+.upper
+    background-image: url( '../images/bg-hero-desktop.svg' )
+    background-color: hsl(193, 100%, 96%)
+    background-repeat: no-repeat
+    background-size: cover
+    padding-bottom: 60px
+    padding-top: 60px
+    
+    .box1
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding-bottom: 40px
+        gap: 40px
+
+        .logo
+            width: 170px
+
+    .box2
+            display: flex
+            gap: 60px
+            align-items: center
+
+            .box3
+                width: 50%
+                display: flex
+                flex-wrap: nowrap
+                flex-direction: column
+                & :nth-child(3) 
+                    height: 10%
+                    width: 50%
+                    background-color: rgb(211, 57, 178)
+                    border: 0
+                    color: white
+                &:nth-child(3) 
+                    display: flex
+                    align-items: flex-start
+
+            .hero-image-wrapper
+                width: 50%
+                
+                .box4
+                    width: 100%

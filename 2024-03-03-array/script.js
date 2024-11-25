@@ -281,14 +281,17 @@ for (let num in numbersArr) {
     console.log(num)
 }
 
+// for num in numbersArr:
+//     print(num)
+
 console.log('map')
 
 // numbersArr.map((num, i, arr) => {
 //     console.log(i, num, arr)
 // })
 
-numbersArr.map((num) => {
-    console.log(num)
+numbersArr.map(function(num){
+    console.log(num)        
 })
 
 console.log('forEach')

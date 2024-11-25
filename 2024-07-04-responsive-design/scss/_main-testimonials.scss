@@ -1,0 +1,53 @@
+@use './variables';
+@use './responsive';
+
+
+
+
+
+.main-testimonials {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    @include responsive.screen-lg {
+        width: 60%;
+    }
+    @include responsive.screen-md {
+        width: 100%;
+    }
+
+
+
+    .card {
+        &:nth-of-type(4n + 1) {
+            width: calc((100% - 30px) / 3 * 2);
+            background-color: variables.$bg-color1;
+            color: variables.$color-white;
+        }
+
+        &:nth-of-type(4n + 2) {
+            background-color: variables.$bg-color2;
+            color: variables.$color-white;
+            width: calc((100% - 30px) / 3);
+        }
+        
+        &:nth-of-type(4n + 3) { 
+            background-color: variables.$bg-color3;
+            width: calc((100% - 30px) / 3);
+        }
+        &:nth-of-type(4n + 4) {
+            width: calc((100% - 30px) / 3 * 2);
+            background-color: variables.$bg-color4;
+            color: variables.$color-white;
+        }
+
+        &:nth-of-type(1n + 1) {
+            @include responsive.screen-lg {
+                width: 100%;
+            }
+        }
+    }
+
+} 

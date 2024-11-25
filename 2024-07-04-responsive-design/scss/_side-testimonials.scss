@@ -1,0 +1,22 @@
+@use './variables';
+@use './responsive';
+
+
+.side-testimonials {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    @include responsive.screen-lg {
+        width: 40%;
+    }
+    @include responsive.screen-md {
+        width: 100%;
+    }
+
+    .card {
+        background-color: variables.$bg-color3;
+    }
+    
+}

@@ -1,0 +1,42 @@
+.card {
+    padding: 30px;
+    border-radius: 20px;
+
+    .author-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        .author-image {
+            border-radius: 50px;
+            width: 55px;
+            height: 55px;
+        }
+
+        .author-info {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+
+            .author-name {
+                font-weight: bold;
+            }
+
+            .author-verified {
+                opacity: 50%;
+            }
+        }
+    }
+    
+    .title {
+
+    }
+
+    .description {
+        opacity: 0.7;
+    }
+    
+    :last-child {
+        margin-bottom: 0;
+    }
+}

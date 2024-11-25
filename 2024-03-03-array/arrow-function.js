@@ -5,11 +5,11 @@ function func1 () {
 console.log(func1())
 
 // Įprasta funkcija su parametrais
+console.log(func2(3, 2))
 
 function func2 (num1, num2) {
     return num1 + num2
 }
-console.log(func2(3, 2))
 
 // Sukuriamas kintamasis ir jam, kaip reikšmė, priskiriama anoniminė funkcija
 
@@ -42,8 +42,8 @@ console.log(arrowFunc3(4))
 
 // Jeigu arrow funkcija turi vieną parametrą, tai galima nerašyti paprastų skliaustų. Jeigu neturi nei vieno parametro arba jų turi daugiau nei vieną, tai paprasti skliaustai yra būtini.
 
+return num * num
 let arrowFunc4 = num => {
-    return num * num
 }
 console.log(arrowFunc4(4))
 
@@ -54,6 +54,11 @@ let arrowFunc5 = num => num * num
 console.log(arrowFunc5(4))
 
 let nums = [1, 14, 10, 5, 95, 12]
+
+
+let nums2 = [1, 10, 100, 50, 950, 120]
+
+
 let filterNums1 = nums.filter(function(num){
     return num > 10
 })
@@ -65,3 +70,17 @@ console.log(filterNums1)
 
 let filterNums2 = nums.filter(num => num > 10)
 console.log(filterNums2)
+
+// function filterMoreThanOne(element, index, array){
+//     console.log(element, index, array)
+// }
+let filterMoreThanOne = function (num) {
+    return num > 10
+}
+
+let filterNums3 = nums.filter(filterMoreThanOne)
+console.log("🚀 ~ filterNums3:", filterNums3)
+
+let filterNums4 = nums2.filter(filterMoreThanOne)
+console.log("🚀 ~ filterNums4:", filterNums4)
+

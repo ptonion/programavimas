@@ -1,0 +1,20 @@
+@use "./responsive";
+
+*{  
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(194, 224, 214);
+}
+    
+
+.cont {
+    display: flex;
+    gap: 30px;
+    
+    @include responsive.screen-md {
+        flex-wrap: wrap;
+    }
+
+}
