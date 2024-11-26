@@ -1,47 +1,50 @@
 let div = document.querySelector('div') 
 
+let numbers = [-5, -3, -2, -1, 0, 1, 2, 3, 5]
+
+for(let num of numbers) {
+    console.log(num)
+}
+
 let h3 = document.createElement('h3')
-let buttonPlus1 = document.createElement('button')
-let buttonMinus1 = document.createElement('button')
-let buttonPlus2 = document.createElement('button')
-let buttonMinus2 = document.createElement('button')
-let buttonPlus3 = document.createElement('button')
-let buttonMinus3 = document.createElement('button')
+div.append(h3)
+
+let buttonPlus5 = newButton(5) 
+div.append(buttonPlus5)
+
+let buttonPlus3 = newButton(3)
+div.append(buttonPlus3)
+
+let buttonPlus2 = newButton(2)
+div.append(buttonPlus2)
+
+let buttonPlus1 = newButton(1)
+div.append(buttonPlus1)
+
 let buttonReset = document.createElement('button')
+div.append(buttonReset)
+
+let buttonMinus1 = newButton(-1)
+div.append(buttonMinus1)
+
+let buttonMinus2 = newButton(-2)
+div.append(buttonMinus2)
+
+let buttonMinus3 = newButton(-3)
+div.append(buttonMinus3)
+
+let buttonMinus5 = newButton(-5)
+div.append(buttonMinus5)
+
 
 let startNum = 10
 
 let num = startNum
 
-h3.textContent = num
-buttonPlus1.textContent = '+'
-buttonMinus1.textContent = '-'
-buttonPlus2.textContent = '+2'
-buttonMinus2.textContent = '-2'
-buttonPlus3.textContent = '+3'
-buttonMinus3.textContent = '-3'
 buttonReset.textContent = 'reset'
-
-div.append(
-    h3,
-    buttonMinus3,
-    buttonMinus2,
-    buttonMinus1,
-    buttonReset,
-    buttonPlus1,
-    buttonPlus2,
-    buttonPlus3,
-    newButton(-5)
-)
 
 checkData(0)
 
-buttonPlus1.addEventListener('click', () => checkData(1))
-buttonMinus1.addEventListener('click', () => checkData(-1))
-buttonPlus2.addEventListener('click', () => checkData(2))
-buttonMinus2.addEventListener('click', () => checkData(-2))
-buttonPlus3.addEventListener('click', () => checkData(3))
-buttonMinus3.addEventListener('click', () => checkData(-3))
 
 buttonReset.addEventListener('click', function(){
     num = startNum
@@ -106,6 +109,18 @@ function checkData(changeNum) {
     } else {
         buttonMinus3.removeAttribute('disabled')
     }
+
+    if(num >= 6) {
+        buttonPlus5.setAttribute('disabled', true)
+    } else {
+        buttonPlus5.removeAttribute('disabled')
+    }
+    
+    if(num <= 5) {
+        buttonMinus5.setAttribute('disabled', true)
+    } else {
+        buttonMinus5.removeAttribute('disabled')
+    }
     
 }
 
@@ -116,12 +131,9 @@ function newButton(number) {
     button.textContent = number >= 0 ? '+' + number : number
 
 
-    // buttonMinusNum.addEventListener('click', function(){
-    //     num = num - number
-    //     h3.textContent = num
-    //     checkData()
-    //     checkColor()
-    // })
+    button.addEventListener('click', function(){
+        checkData(number)
+    })
     return button
 }
 
