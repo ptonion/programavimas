@@ -160,54 +160,65 @@
 // }
 
 
+function init() {
+    
+    let div = document.querySelector("div")
+    let h3 = document.createElement("h3")
+    div.append(h3)
+    
+    let numbers = [-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5]
+    
+    let startNum = 10
+    let num = startNum
 
-let div = document.querySelector("div")
-let h3 = document.createElement("h3")
-div.append(h3)
-
-let numbers = [-5, -3, -2, -1, 1, 2, 3, 5]
-
-let startNum = 10
-let num = startNum
-h3.textContent = num
-// checkData(0) 
-
-let buttons = {}
-
-for (let number of numbers) {
-    let newButton = createButton(number)
-    div.append(newButton)
-    buttons[number] = newButton 
-    console.log(buttons)
+    // h3.textContent = num
+    
+    let buttons = {}
+    
+    for (let number of numbers) {
+        let newButton = createButton(number)
+        div.append(newButton)
+        buttons[number] = newButton
+        console.log(buttons[number])
+    }
+    
+    checkData(0, h3, numbers, buttons, num, startNum)
 }
 
-let buttonReset = document.createElement("button");
-buttonReset.textContent = "reset";
-div.append(buttonReset);
+init()
 
-buttonReset.addEventListener("click", function () {
-    num = startNum;
-    checkData(0);
-});
-
-
-function checkData(changeNum) {
+function numHandler(num, changeNum, h3) {
+    // if  (changeNum == 0) {
+    //     num = startNum
+    // }
+    const updatedNum = num + changeNum
     num = num + changeNum
     h3.textContent = num
-    checkColor()
-
-    for (let number of numbers) {
-        if (num + number > 10 || num + number < 1) { 
-            buttons[number].setAttribute("disabled", true);
-        } else {
-            buttons[number].removeAttribute("disabled");
-        }
-    }
+    return updatedNum
+    // checkColor(num, h3)
 }
 
+function handelButtonsDisable (numbers, num) {
 
-function checkColor() {
-    if (num > 5) { 
+    for (let number of numbers) {
+        if (num + number > 10 || num + number < 1) {
+            buttons[number].setAttribute("disabled", true)
+        } else {
+            buttons[number].removeAttribute("disabled")
+        }
+    }
+
+}
+
+function checkData(changeNum, h3, numbers, buttons, num, startNum) {
+
+    let updatedNum = numHandler(num, changeNum, h3)
+    handelButtonsDisable(numbers, updatedNum)
+}
+
+function checkColor(num, h3) {
+    console.log(h3)
+    if (num > 5) {
         h3.style.color = "green"
     } else {
         h3.style.color = "red"
@@ -216,10 +227,17 @@ function checkColor() {
 
 function createButton(number) {
     let button = document.createElement("button")
-    button.textContent = number >= 0 ? "+" + number : number
+    button.textContent = number
+    if (number == 0) {
+        button.textContent = 'reset'
+    }
+    if (number > 0) {
+        button.textContent = '+' + number
+    }
     button.addEventListener("click", function () {
         checkData(number)
-    });
+    })
     return button
 }
+
  
